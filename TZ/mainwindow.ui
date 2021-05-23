@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>605</width>
+    <height>277</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Кредитный калькулятор</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../../Downloads/attachment-android-kalkulyator-png-amp.png</normaloff>../../Downloads/attachment-android-kalkulyator-png-amp.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color:#3399FF;
+border-radius: 5px;
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="label_SUM">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>70</y>
+      <width>141</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: white;
+font: 75 10pt &quot;MS Shell Dlg 2&quot;;
+</string>
+    </property>
+    <property name="text">
+     <string>Сумма кредита:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_DATA">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>140</y>
+      <width>131</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: white;
+font: 75 10pt &quot;MS Shell Dlg 2&quot;;
+</string>
+    </property>
+    <property name="text">
+     <string>Срок кредита(в мес):</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_PERCENT">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>140</y>
+      <width>71</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: white;
+font: 75 10pt &quot;MS Shell Dlg 2&quot;;</string>
+    </property>
+    <property name="text">
+     <string>Ставка, %:</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_sum">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>100</y>
+      <width>255</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 204, 102);
+border-radius: 5px;
+border: 1px solid white;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_data">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>170</y>
+      <width>123</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 204, 102);
+border-radius: 5px;
+border: 1px solid white;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_percent">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>170</y>
+      <width>123</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 204, 102);
+border-radius: 5px;
+border: 1px solid white;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_all_sum">
+    <property name="geometry">
+     <rect>
+      <x>450</x>
+      <y>200</y>
+      <width>141</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel
+{
+border: 1px solid white;
+border-radius: 5px;
+qproperty-alignment: 'AlignVCenter | AlignLeft';
+background-color: rgb(255, 204, 102);
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_ravno">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>230</y>
+      <width>101</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: white;
+;
+border-radius: 5px;</string>
+    </property>
+    <property name="text">
+     <string>Рассчитать</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_ALL_SUM">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>200</y>
+      <width>141</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel
+{
+qproperty-alignment: 'AlignVCenter | AlignRight';
+color: white;
+	font: 75 10pt &quot;MS Shell Dlg 2&quot;;
+}</string>
+    </property>
+    <property name="text">
+     <string>Общая сумма выплат:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_plata">
+    <property name="geometry">
+     <rect>
+      <x>450</x>
+      <y>150</y>
+      <width>141</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel
+{
+border: 1px solid white;
+border-radius: 5px;
+qproperty-alignment: 'AlignVCenter | AlignLeft';
+background-color: rgb(255, 204, 102);
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_PLATA">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>150</y>
+      <width>141</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel
+{
+qproperty-alignment: 'AlignVCenter | AlignRight';
+color: white;
+	font: 75 10pt &quot;MS Shell Dlg 2&quot;;
+}</string>
+    </property>
+    <property name="text">
+     <string>Сумма переплат:</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_clear">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>230</y>
+      <width>81</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: white;
+border-radius: 5px;
+</string>
+    </property>
+    <property name="text">
+     <string>Сбросить</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_MONTH">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>100</y>
+      <width>141</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel
+{
+qproperty-alignment: 'AlignVCenter | AlignRight';
+color: white;
+	font: 75 10pt &quot;MS Shell Dlg 2&quot;;
+}</string>
+    </property>
+    <property name="text">
+     <string>Ежемесячный платеж:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_month">
+    <property name="geometry">
+     <rect>
+      <x>450</x>
+      <y>100</y>
+      <width>141</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel
+{
+border: 1px solid white;
+border-radius: 5px;
+qproperty-alignment: 'AlignVCenter | AlignLeft';
+background-color: rgb(255, 204, 102);
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_error">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>200</y>
+      <width>181</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: red;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_error_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>130</y>
+      <width>101</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: red;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_error_3">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>200</y>
+      <width>101</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: red;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>381</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: italic 28pt &quot;ГОСТ тип А&quot;;
+qproperty-alignment: 'AlignVCenter';
+color: rgb(255, 204, 102);</string>
+    </property>
+    <property name="text">
+     <string>Кредитный калькулятор</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>10</y>
+      <width>91</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>../../Downloads/s5.png</pixmap>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>500</x>
+      <y>20</y>
+      <width>91</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>../../Downloads/mini_kek.png</pixmap>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_light">
+    <property name="geometry">
+     <rect>
+      <x>530</x>
+      <y>240</y>
+      <width>41</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../../Downloads/lampa.png</normaloff>../../Downloads/lampa.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>40</width>
+      <height>40</height>
+     </size>
+    </property>
+   </widget>
+   <zorder>label_error_3</zorder>
+   <zorder>label_DATA</zorder>
+   <zorder>label_error</zorder>
+   <zorder>label_2</zorder>
+   <zorder>label_3</zorder>
+   <zorder>label_error_2</zorder>
+   <zorder>label_SUM</zorder>
+   <zorder>label_PERCENT</zorder>
+   <zorder>lineEdit_sum</zorder>
+   <zorder>lineEdit_data</zorder>
+   <zorder>lineEdit_percent</zorder>
+   <zorder>label_all_sum</zorder>
+   <zorder>pushButton_ravno</zorder>
+   <zorder>label_ALL_SUM</zorder>
+   <zorder>label_plata</zorder>
+   <zorder>label_PLATA</zorder>
+   <zorder>pushButton_clear</zorder>
+   <zorder>label_MONTH</zorder>
+   <zorder>label_month</zorder>
+   <zorder>label</zorder>
+   <zorder>pushButton_light</zorder>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
